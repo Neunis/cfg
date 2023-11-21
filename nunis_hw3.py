@@ -16,7 +16,7 @@ The program should:
 
 """
 weather_status = input("Is it raining outside? y/n ")
-weather_status.lower()
+weather_status = weather_status.lower()
 
 if weather_status == 'y':
     print("You should take an umbrella.")
@@ -72,6 +72,11 @@ outputs the century and decade (e.g. "Nineteenth Century, Seventies")
 """
 
 def CenturyDecade(year):
+    y = str(year)
+    notes = []
+    for l in y:
+        notes.append(l)
+
     century_dic = {
         1: "Eighteenth Century",
         2: "Nineteenth Century"
@@ -86,11 +91,41 @@ def CenturyDecade(year):
         6: "Sixties",
         7: "Seventies",
         8: "Eighties",
-        9: "Nineties",
+        9: "Nineties"
     }
 
-    year
-    result = ("{}{}".format(century_name, decade_name))
+    century_num = notes[1]
+    decade_num = notes[2]
+
+    if century_num == "8":
+        century_name = century_dic[1]
+    elif century_num == "9":
+        century_name = century_dic[2]
+    else:
+        century_name = "century out of range"
+
+    if decade_num == "1":
+        decade_name = decades_dic[1]
+    elif decade_num == "2":
+        decade_name = decades_dic[2]
+    elif decade_num == "3":
+        decade_name = decades_dic[3]
+    elif decade_num == "4":
+        decade_name = decades_dic[4]
+    elif decade_num == "5":
+        decade_name = decades_dic[5]
+    elif decade_num == "6":
+        decade_name = decades_dic[6]
+    elif decade_num == "7":
+        decade_name = decades_dic[7]
+    elif decade_num == "8":
+        decade_name = decades_dic[8]
+    elif decade_num == "9":
+        decade_name = decades_dic[9]
+    else:
+        decade_name = "decade out of range"
+
+    result = ("{}, {}".format(century_name, decade_name))
     return result
 
 
