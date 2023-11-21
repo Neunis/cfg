@@ -14,7 +14,7 @@ The program should:
 3. If the input is 'n', it should output 'You don't need an umbrella' 
 """
 
-"""
+
 weather_status = input("Is it raining outside? y/n ")
 weather_status = weather_status.lower()
 
@@ -25,7 +25,6 @@ elif weather_status == 'n':
 else:
     print("That is not a proper response, therefore I cannot help you at this time.")
 
-"""
 
 
 """
@@ -51,14 +50,14 @@ particularly the words can and cannot
 - future note: add a error response if someone does not input a number, for example 'hi'
 """
 
-"""
+
 my_money = int(input('How much money do you have? '))
 boat_cost = 20 + 5
 if my_money < boat_cost:
     print('You cannot afford the boat hire')
 else:
     print('You can afford the board hire')
-"""
+
 
 
 """
